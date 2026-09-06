@@ -1,0 +1,5 @@
+packages:
+  - 'contracts'
+  - 'sdk'
+minimumReleaseAgeExclude:
+  - open-engine-sdk@0.0.1

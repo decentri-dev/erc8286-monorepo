@@ -1,0 +1,16 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+# Runtime-tuned: validators are per-chain singletons, so bytecode size is
+# secondary to per-call gas.
+optimizer = true
+optimizer_runs = 10_000
+allow_paths = ["node_modules"]
+remappings = [
+  "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+  "FreshCryptoLib/=node_modules/FreshCryptoLib/",
+  "solady/=node_modules/solady/"
+]
+
+skip = [".yul"]

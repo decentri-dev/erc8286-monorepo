@@ -1,0 +1,38 @@
+{
+  "name": "@erc8286/sdk",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Framework-agnostic toolkit for ERC-8286 frame accounts and transactions.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/decentri-dev/erc8286-monorepo.git",
+    "directory": "sdk"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./eoa": "./src/eoa.ts",
+    "./webauthn": "./src/webauthn.ts"
+  },
+  "dependencies": {
+    "@openzeppelin/merkle-tree": "^1.0.8",
+    "@open-engine/sdk": "npm:open-engine-sdk@0.0.1",
+    "@erc8286/contracts": "workspace:*"
+  },
+  "peerDependencies": {
+    "viem": "^2.55.19"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0",
+    "viem": "^2.55.19"
+  }
+}
